@@ -1,0 +1,47 @@
+Sydney Airport ANEF 2045 georeferencing outputs
+===============================================
+
+Coordinate system
+-----------------
+EPSG:4326 / WGS84. GeoJSON coordinate order is [longitude, latitude].
+
+What was extracted
+-------------------
+ANEF 20: 2305 source SVG vertices; 1 closed path(s)
+ANEF 25: 1579 source SVG vertices; 2 closed path(s)
+ANEF 30: 1012 source SVG vertices; 2 closed path(s)
+ANEF 35: 969 source SVG vertices; 4 closed path(s)
+
+Method
+------
+1. Read the labelled cont20/25/30/35 paths and fragments from the supplied SVG.
+2. Matched cont20's vertices to the corresponding vector contour in the endorsed PDF.
+   Fit residual: 0.002583 pt RMS; 0.005345 pt maximum.
+3. Used the PDF's embedded GeoPDF viewport corners, which are WGS84, to convert each SVG vertex.
+4. Repeated the first vertex only for the closed GeoJSON/SVG line; the CSV lists each source SVG vertex once.
+
+Runways and helipad
+-------------------
+Endpoint coordinates are transcribed from the endorsed PDF's Runway End table, not inferred from the stylised SVG runway polygons.
+The line features connect 16R-34L, 07-25, and 16L-34R in that order.
+
+Use in QGIS
+------------
+Add ANEF2045_contours_WGS84.geojson as a vector layer; its CRS is EPSG:4326.
+Add ANEF2045_runways_helipad_WGS84.geojson for the runway lines, endpoint points, and helipad.
+The coordinate-native SVG is provided for inspection/graphics; QGIS should use the GeoJSON for spatial analysis.
+
+ANEF2045_contours_with_WGS84_attributes.svg preserves the supplied SVG layout and adds a semicolon-separated longitude,latitude list to each contour path's data-wgs84-coordinates attribute.
+
+Manual reproduction in QGIS
+---------------------------
+QGIS should not be expected to make an SVG geospatial merely by assigning a CRS. Convert/extract the SVG vertices to a delimited table first, or use the supplied CSV. With source page coordinates x=svg_x_mm and y=svg_y_mm, use:
+  pdf_x = 2.83462477*x + 0.0000071037*y + 1509.68389
+  pdf_y = -0.0000410083*x - 2.83465406*y + 1228.89620
+  longitude = 150.798484 + pdf_x/2383.92*(151.297375-150.798484)
+  latitude = -34.0805913 + pdf_y/1684.08*((-33.7881569)-(-34.0805913))
+In QGIS: load the CSV as a non-spatial table, calculate longitude/latitude fields, create points from those fields in EPSG:4326, then save as GeoJSON and connect points by source_path_id and vertex_index. For a control-point-only workflow, use three or more non-collinear runway-end points from the reference CSV; the published SVG runway strips are schematic, so use the PDF GeoPDF viewport/formula for the contour geometry.
+
+Caution
+-------
+These are coordinates of the published chart graphics. They are suitable for map overlay and GIS analysis at chart scale, but are not a substitute for the underlying ANEF model data or survey-grade airport geometry.

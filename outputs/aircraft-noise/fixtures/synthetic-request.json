@@ -1,0 +1,106 @@
+{
+  "project": {
+    "project_id": "DEMO-001",
+    "assessment_id": "DEMO-SITE-01",
+    "client": null,
+    "site_address": null,
+    "proposal": null,
+    "building_use": "Residential",
+    "airport_id": "YSSY",
+    "forecast_year": 2045,
+    "assessment_purpose": "Synthetic site demonstration"
+  },
+  "revision": 1,
+  "data_mode": "synthetic",
+  "crs": "EPSG:4326",
+  "receptors": [
+    {
+      "receptor_id": "R01",
+      "latitude": -33.914,
+      "longitude": 151.173,
+      "confirmed": true,
+      "coordinate_source": "Synthetic demonstration coordinate",
+      "elevation_m": 0,
+      "vertical_datum": "SYNTHETIC"
+    }
+  ],
+  "uncertainty_m": 30,
+  "airport_elevation_m": 0,
+  "airport_vertical_datum": "SYNTHETIC",
+  "operation_cases": [
+    {
+      "operation_case_id": "SYN-ARR-01",
+      "receptor_id": "R01",
+      "aircraft": "SYNTHETIC AIRCRAFT",
+      "runway_id": "16R/34L",
+      "direction": "16R",
+      "operation": "arrival",
+      "load": "synthetic",
+      "table_id": "SYN-01",
+      "path": "straight",
+      "mapping_evidence": "Synthetic test mapping only",
+      "relevance_evidence": "Synthetic test case",
+      "lookup_policy": "exact"
+    }
+  ],
+  "noise_tables": {
+    "SYN-01": {
+      "distance_axis_m": [
+        1637.4348460015547
+      ],
+      "ds_axis_m": [
+        488.1530532283123
+      ],
+      "values_db": [
+        [
+          81.25
+        ]
+      ],
+      "source_refs": [
+        "synthetic-table"
+      ],
+      "verification_status": "synthetic"
+    }
+  },
+  "terrain_tables": {},
+  "sources": [
+    {
+      "source_id": "synthetic-table",
+      "title": "Synthetic test table; NOT Standard data",
+      "filename": "synthetic-request.json",
+      "sha256": "63048fdaf5ffc9479fa19decb16be47aa09d876d87a757c06c4ddad95dcbe87b",
+      "edition_or_revision": "fixture-v1",
+      "source_type": "synthetic",
+      "locator": {
+        "method": "explicit software test data"
+      },
+      "verification_status": "unverified"
+    }
+  ],
+  "criterion_catalogue": [
+    {
+      "criterion_id": "SYN-ROOM-01",
+      "building_type": "Synthetic building",
+      "activity": "Synthetic activity",
+      "level": {
+        "value": 48,
+        "unit": "dB(A)",
+        "descriptor": "synthetic indoor criterion",
+        "status": "requires_confirmation",
+        "provenance": "assumed",
+        "source_refs": [
+          "synthetic-table"
+        ],
+        "formula_ref": null,
+        "assumptions": []
+      },
+      "source_refs": [
+        "synthetic-table"
+      ],
+      "applicability_notes": [
+        "Test value, not AS 2021 criterion."
+      ]
+    }
+  ],
+  "spectra": []
+}

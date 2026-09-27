@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aircraft-noise.local/schemas/report-issue.schema.json",
+  "description": "Top-level integration boundary only. Not a producer/consumer implemented by Project 1; nested owner schemas must be reconciled.",
+  "type": "object",
+  "required": [
+    "project_id",
+    "assessment_id",
+    "aircraft_basis_package_id",
+    "room_results_package_id",
+    "template_version",
+    "report_number",
+    "issue_revision",
+    "issue_date",
+    "report_status",
+    "section_source_map",
+    "artifacts",
+    "outstanding_issues",
+    "review_decisions",
+    "limitations"
+  ],
+  "properties": {
+    "project_id": {},
+    "assessment_id": {},
+    "aircraft_basis_package_id": {},
+    "room_results_package_id": {},
+    "template_version": {},
+    "report_number": {},
+    "issue_revision": {},
+    "issue_date": {},
+    "report_status": {},
+    "section_source_map": {},
+    "artifacts": {},
+    "outstanding_issues": {},
+    "review_decisions": {},
+    "limitations": {}
+  },
+  "additionalProperties": false
+}

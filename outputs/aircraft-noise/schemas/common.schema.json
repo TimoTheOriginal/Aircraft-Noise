@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aircraft-noise.local/schemas/common.schema.json",
+  "$defs": {
+    "Quantity": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": "string"
+        },
+        "descriptor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "requires_confirmation",
+            "not_assessed"
+          ]
+        },
+        "provenance": {
+          "enum": [
+            "sourced",
+            "measured",
+            "extracted",
+            "user_entered",
+            "assumed",
+            "calculated"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "formula_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "value",
+        "unit",
+        "descriptor",
+        "status",
+        "provenance",
+        "source_refs",
+        "formula_ref",
+        "assumptions"
+      ],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "info",
+            "warning",
+            "error"
+          ]
+        },
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "affected_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "blocks_approval": {
+          "type": "boolean"
+        },
+        "owner_module": {
+          "enum": [
+            "aircraft",
+            "rooms",
+            "report"
+          ]
+        }
+      },
+      "required": [
+        "issue_id",
+        "severity",
+        "code",
+        "message",
+        "affected_ids",
+        "blocks_approval",
+        "owner_module"
+      ],
+      "additionalProperties": false
+    },
+    "SourceRecord": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "filename": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "edition_or_revision": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string"
+        },
+        "locator": {
+          "type": [
+            "object",
+            "string"
+          ]
+        },
+        "verification_status": {
+          "enum": [
+            "verified",
+            "requires_confirmation",
+            "unverified"
+          ]
+        }
+      },
+      "required": [
+        "source_id",
+        "title",
+        "filename",
+        "sha256",
+        "edition_or_revision",
+        "source_type",
+        "locator",
+        "verification_status"
+      ],
+      "additionalProperties": false
+    },
+    "Spectrum": {
+      "type": "object",
+      "properties": {
+        "spectrum_id": {
+          "type": "string"
+        },
+        "operation_case_id": {
+          "type": "string"
+        },
+        "band_type": {
+          "enum": [
+            "octave",
+            "third_octave"
+          ]
+        },
+        "centre_frequencies_hz": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "levels_db": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "weighting": {
+          "type": "string"
+        },
+        "level_basis": {
+          "enum": [
+            "relative",
+            "absolute"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "requires_confirmation",
+            "not_assessed"
+          ]
+        }
+      },
+      "required": [
+        "spectrum_id",
+        "operation_case_id",
+        "band_type",
+        "centre_frequencies_hz",
+        "levels_db",
+        "weighting",
+        "level_basis",
+        "source_refs",
+        "status"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

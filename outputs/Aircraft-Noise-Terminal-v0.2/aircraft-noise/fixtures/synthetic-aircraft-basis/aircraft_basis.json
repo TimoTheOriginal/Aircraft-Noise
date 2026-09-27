@@ -1,0 +1,303 @@
+{
+  "project": {
+    "project_id": "DEMO-001",
+    "assessment_id": "DEMO-SITE-01",
+    "client": null,
+    "site_address": null,
+    "proposal": null,
+    "building_use": "Residential",
+    "airport_id": "YSSY",
+    "forecast_year": 2045,
+    "assessment_purpose": "Synthetic site demonstration"
+  },
+  "site": {
+    "crs": "EPSG:4326",
+    "receptors": [
+      {
+        "receptor_id": "R01",
+        "latitude": -33.914,
+        "longitude": 151.173,
+        "confirmed": true,
+        "coordinate_source": "Synthetic demonstration coordinate",
+        "elevation_m": 0,
+        "vertical_datum": "SYNTHETIC"
+      }
+    ],
+    "footprint": null,
+    "airport_elevation_m": 0,
+    "airport_vertical_datum": "SYNTHETIC",
+    "runway_geometry": [
+      {
+        "receptor_id": "R01",
+        "runway_id": "16R/34L",
+        "end_1": "16R",
+        "end_2": "34L",
+        "length_m": 3961.9805814306696,
+        "signed_projection_m": -1637.4348460015547,
+        "ds_m": 488.1530532283123,
+        "dl_m": 1637.4348460015547,
+        "dt_m": 5599.4154274322245,
+        "distance_to_segment_m": 1708.6504260018369,
+        "projection_lon_lat": [
+          151.16784030191198,
+          -33.914929911355685
+        ],
+        "near_end": "16R",
+        "position": "beyond_end_1",
+        "metric_crs": "EPSG:32756",
+        "source_refs": [
+          "runways"
+        ],
+        "status": "requires_confirmation",
+        "nearest": true
+      },
+      {
+        "receptor_id": "R01",
+        "runway_id": "07/25",
+        "end_1": "07",
+        "end_2": "25",
+        "length_m": 2530.198290185546,
+        "signed_projection_m": 1732.188143255658,
+        "ds_m": 2939.235189719768,
+        "dl_m": null,
+        "dt_m": null,
+        "distance_to_segment_m": 2939.235189719768,
+        "projection_lon_lat": [
+          151.18165503066928,
+          -33.93949869861264
+        ],
+        "near_end": null,
+        "position": "beside_runway",
+        "metric_crs": "EPSG:32756",
+        "source_refs": [
+          "runways"
+        ],
+        "status": "requires_confirmation",
+        "nearest": false
+      },
+      {
+        "receptor_id": "R01",
+        "runway_id": "16L/34R",
+        "end_1": "16L",
+        "end_2": "34R",
+        "length_m": 2438.4677014334907,
+        "signed_projection_m": -4160.400890181585,
+        "ds_m": 550.4524434218404,
+        "dl_m": 4160.400890181585,
+        "dt_m": 6598.868591615075,
+        "distance_to_segment_m": 4196.657415073668,
+        "projection_lon_lat": [
+          151.17881839648513,
+          -33.91295240775912
+        ],
+        "near_end": "16L",
+        "position": "beyond_end_1",
+        "metric_crs": "EPSG:32756",
+        "source_refs": [
+          "runways"
+        ],
+        "status": "requires_confirmation",
+        "nearest": false
+      }
+    ]
+  },
+  "anef": {
+    "receptors": [
+      {
+        "actual_band": {
+          "lower": 25,
+          "upper": 30
+        },
+        "band_text": "25–30",
+        "project_contour_label": 30,
+        "coverage_status": "within_provisional_viewport",
+        "on_contour": [],
+        "near_contours": [
+          25
+        ],
+        "boundary_distance_m": 1.8496583862292058,
+        "boundary_uncertain": true,
+        "report_required": null,
+        "report_reason": "Determine reporting scope with consultant; below-20 rule does not decide this band.",
+        "receptor_id": "R01",
+        "status": "requires_confirmation",
+        "source_refs": [
+          "contours",
+          "georeferencing"
+        ]
+      }
+    ],
+    "site_acceptability": {
+      "status": "not_assessed",
+      "source_refs": [
+        "standard-text"
+      ],
+      "reason": "Verified Table 2.1 with notes and building-use interpretation required."
+    },
+    "transform_audit": {
+      "source_refs": [
+        "georeferencing"
+      ],
+      "metric_crs": "EPSG:32756",
+      "uncertainty_m": 30,
+      "coverage_basis": "GeoPDF viewport bounds from supplied notes; map panel extent unverified",
+      "status": "requires_confirmation"
+    }
+  },
+  "operation_cases": [
+    {
+      "operation_case_id": "SYN-ARR-01",
+      "receptor_id": "R01",
+      "aircraft": "SYNTHETIC AIRCRAFT",
+      "runway_id": "16R/34L",
+      "direction": "16R",
+      "operation": "arrival",
+      "load": "synthetic",
+      "table_id": "SYN-01",
+      "path": "straight",
+      "mapping_evidence": "Synthetic test mapping only",
+      "relevance_evidence": "Synthetic test case",
+      "lookup_policy": "exact",
+      "raw_geometry": {
+        "receptor_id": "R01",
+        "runway_id": "16R/34L",
+        "end_1": "16R",
+        "end_2": "34L",
+        "length_m": 3961.9805814306696,
+        "signed_projection_m": -1637.4348460015547,
+        "ds_m": 488.1530532283123,
+        "dl_m": 1637.4348460015547,
+        "dt_m": 5599.4154274322245,
+        "distance_to_segment_m": 1708.6504260018369,
+        "projection_lon_lat": [
+          151.16784030191198,
+          -33.914929911355685
+        ],
+        "near_end": "16R",
+        "position": "beyond_end_1",
+        "metric_crs": "EPSG:32756",
+        "source_refs": [
+          "runways"
+        ],
+        "status": "requires_confirmation",
+        "nearest": true
+      },
+      "corrected_geometry": {
+        "dl_m": 1637.4348460015547,
+        "dt_m": 5599.4154274322245
+      },
+      "terrain_correction": {
+        "correction_m": 0,
+        "basis": "Magnitude below 10 m",
+        "weights": []
+      },
+      "exterior_level": {
+        "value": 81.25,
+        "unit": "dB(A)",
+        "descriptor": "average maximum A-weighted / Slow",
+        "status": "requires_confirmation",
+        "provenance": "calculated",
+        "source_refs": [
+          "synthetic-table"
+        ],
+        "formula_ref": "aircraft-table-lookup-v1",
+        "assumptions": []
+      },
+      "lookup_trace": [
+        {
+          "row": 0,
+          "column": 0,
+          "distance_m": 1637.4348460015547,
+          "ds_m": 488.1530532283123,
+          "value_db": 81.25,
+          "weight": 1
+        }
+      ],
+      "spectrum_ref": null,
+      "issues": []
+    }
+  ],
+  "governing_exterior": [
+    {
+      "receptor_id": "R01",
+      "operation_case_ids": [
+        "SYN-ARR-01"
+      ],
+      "level": {
+        "value": 81.25,
+        "unit": "dB(A)",
+        "descriptor": "highest assessed average maximum / Slow",
+        "status": "requires_confirmation",
+        "provenance": "calculated",
+        "source_refs": [],
+        "formula_ref": null,
+        "assumptions": []
+      },
+      "selection_basis": "Maximum of relevant assessed candidates; unresolved operations may govern. No energy summation.",
+      "status": "requires_confirmation"
+    }
+  ],
+  "criterion_catalogue": [
+    {
+      "criterion_id": "SYN-ROOM-01",
+      "building_type": "Synthetic building",
+      "activity": "Synthetic activity",
+      "level": {
+        "value": 48,
+        "unit": "dB(A)",
+        "descriptor": "synthetic indoor criterion",
+        "status": "requires_confirmation",
+        "provenance": "assumed",
+        "source_refs": [
+          "synthetic-table"
+        ],
+        "formula_ref": null,
+        "assumptions": []
+      },
+      "source_refs": [
+        "synthetic-table"
+      ],
+      "applicability_notes": [
+        "Test value, not AS 2021 criterion."
+      ]
+    }
+  ],
+  "spectra": [],
+  "assumptions": [
+    "Contour band project label uses higher enclosing contour; it is not an interpolated ANEF value.",
+    "All chart geometry remains provisional until independently checked.",
+    "Nearest runway is minimum distance to finite runway centreline segment; it is not a governing acoustic case."
+  ],
+  "calculation_records": [
+    {
+      "formula_id": "runway-vector-v1",
+      "metric_crs": "EPSG:32756",
+      "applicability": "Straight centreline geometry within 100 km of Sydney",
+      "rounding": "Full precision retained; display only rounded",
+      "test_ids": [
+        "GeometryTests"
+      ]
+    },
+    {
+      "formula_id": "contour-cover-v1",
+      "applicability": "Closed valid supplied contour rings; disconnected rings unioned",
+      "rounding": "No ANEF interpolation",
+      "test_ids": [
+        "ContourTests"
+      ]
+    }
+  ],
+  "review_decisions": [],
+  "assets": [
+    {
+      "asset_id": "site-map",
+      "role": "site_geometry",
+      "path": "assets/site-map.svg",
+      "caption": "PRELIMINARY · SYNTHETIC · supplied ANEF 2045 contours and receptors",
+      "source_refs": [
+        "contours",
+        "runways"
+      ]
+    }
+  ]
+}

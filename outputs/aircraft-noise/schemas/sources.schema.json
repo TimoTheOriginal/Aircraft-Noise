@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aircraft-noise.local/schemas/sources.schema.json",
+  "type": "array",
+  "items": {
+    "$ref": "https://aircraft-noise.local/schemas/common.schema.json#/$defs/SourceRecord"
+  }
+}

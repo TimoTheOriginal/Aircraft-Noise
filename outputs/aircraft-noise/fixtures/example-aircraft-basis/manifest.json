@@ -1,0 +1,132 @@
+{
+  "contract_version": "1.0.0",
+  "package_type": "aircraft-basis",
+  "package_id": "e37623f6-c81c-4938-bae0-a820c3e7c65e",
+  "project_id": "SITE-001",
+  "assessment_id": "SITE-001-R01",
+  "revision": 1,
+  "producer": {
+    "module": "aircraft",
+    "software_version": "0.2.0"
+  },
+  "created_at": "2026-09-26T15:56:17.663317Z",
+  "standard_edition": "AS 2021:2015",
+  "data_mode": "project",
+  "review_status": "requires_confirmation",
+  "upstream": [],
+  "files": [
+    {
+      "role": "payload",
+      "path": "aircraft_basis.json",
+      "media_type": "application/json",
+      "sha256": "e71e6ee4ab76f59fa5726c42e20eebed66477178cbc34153e7ae103dac7e3b1a"
+    },
+    {
+      "role": "sources",
+      "path": "sources.json",
+      "media_type": "application/json",
+      "sha256": "4787e922964a8d3626132a5401a3d6947db091df914ec2f259a3acf90a3d8232"
+    },
+    {
+      "role": "site_geometry",
+      "path": "assets/site-map.svg",
+      "media_type": "image/svg+xml",
+      "sha256": "3452eab43034ce7a9bf43a61b3268b2f40e9f1614057e8b4b8ee0458cb06ecbd"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "MAP_REVIEW",
+      "severity": "warning",
+      "code": "MAP_REVIEW",
+      "message": "Supplied chart graphics and viewport extent need independent control-point and coverage verification.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "STANDARD_REVIEW",
+      "severity": "warning",
+      "code": "STANDARD_REVIEW",
+      "message": "Original AS 2021:2015 pages and independent table transcription checks are not supplied.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "OPERATIONS_REVIEW",
+      "severity": "warning",
+      "code": "OPERATIONS_REVIEW",
+      "message": "Confirm forecast movement register and all relevant runway directions before selecting a design maximum.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "SITE_UNCONFIRMED-R01",
+      "severity": "warning",
+      "code": "SITE_UNCONFIRMED",
+      "message": "Confirm the receptor location and coordinate source.",
+      "affected_ids": [
+        "R01"
+      ],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "PRELIMINARY_TABLE_POLICY",
+      "severity": "warning",
+      "code": "PRELIMINARY_TABLE_POLICY",
+      "message": "User selected highest of surrounding cells as a preliminary engineering policy on 2026-09-26. Not asserted as an AS2021 aircraft-table interpolation rule.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "ELEVATIONS_NOT_APPLIED",
+      "severity": "warning",
+      "code": "ELEVATIONS_NOT_APPLIED",
+      "message": "Ranking uses raw DL/DT for uncorrected screening. Supply elevations and departure categories for height-corrected results.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "FORECAST_CASES_PENDING",
+      "severity": "warning",
+      "code": "FORECAST_CASES_PENDING",
+      "message": "228 of 240 retained operation/load cases have no level. See case register for directions, mappings, movement markers and table domains.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "REFERENCE_RECONCILIATION",
+      "severity": "warning",
+      "code": "REFERENCE_RECONCILIATION",
+      "message": "985 differing cells across supplied workbooks. Extraction2 is the numeric source; relevant differences appear in each lookup trace.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "SPECTRA_MISSING",
+      "severity": "warning",
+      "code": "SPECTRA_MISSING",
+      "message": "No separately sourced spectra; overall dB(A) is not converted to spectral bands.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "CRITERIA_UNVERIFIED",
+      "severity": "warning",
+      "code": "CRITERIA_UNVERIFIED",
+      "message": "No independently verified Table 3.3 catalogue supplied.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    }
+  ],
+  "approvals": []
+}

@@ -1,0 +1,43 @@
+{
+  "project": {
+    "project_id": "SITE-001",
+    "assessment_id": "SITE-001-R01",
+    "client": null,
+    "site_address": null,
+    "proposal": null,
+    "building_use": "Residential",
+    "airport_id": "YSSY",
+    "forecast_year": 2045,
+    "assessment_purpose": "Preliminary 2045 aircraft noise screening"
+  },
+  "revision": 1,
+  "data_mode": "project",
+  "crs": "EPSG:4326",
+  "receptors": [
+    {
+      "receptor_id": "R01",
+      "latitude": -33.89754544671029,
+      "longitude": 151.13696110226067,
+      "confirmed": false,
+      "coordinate_source": "Coordinate example supplied by user; replace with project location",
+      "elevation_m": null,
+      "vertical_datum": null
+    }
+  ],
+  "uncertainty_m": 30,
+  "airport_elevation_m": null,
+  "airport_vertical_datum": null,
+  "operation_cases": [],
+  "noise_tables": {},
+  "terrain_tables": {},
+  "sources": [],
+  "criterion_catalogue": [],
+  "spectra": [],
+  "forecast": {
+    "enabled": true,
+    "lookup_policy": "surrounding_max",
+    "height_mode": "uncorrected_screening",
+    "mapping_overrides": {},
+    "departure_category_overrides": {}
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aircraft-noise.local/schemas/room-results.schema.json",
+  "description": "Top-level integration boundary only. Not a producer/consumer implemented by Project 1; nested owner schemas must be reconciled.",
+  "type": "object",
+  "required": [
+    "project_id",
+    "assessment_id",
+    "aircraft_basis_package_id",
+    "aircraft_basis_payload_sha256",
+    "drawing_register",
+    "rooms",
+    "components",
+    "assemblies",
+    "construction_schedule",
+    "ventilation",
+    "unresolved_paths",
+    "assumptions",
+    "calculation_records",
+    "review_decisions",
+    "assets"
+  ],
+  "properties": {
+    "project_id": {},
+    "assessment_id": {},
+    "aircraft_basis_package_id": {},
+    "aircraft_basis_payload_sha256": {},
+    "drawing_register": {},
+    "rooms": {},
+    "components": {},
+    "assemblies": {},
+    "construction_schedule": {},
+    "ventilation": {},
+    "unresolved_paths": {},
+    "assumptions": {},
+    "calculation_records": {},
+    "review_decisions": {},
+    "assets": {}
+  },
+  "additionalProperties": false
+}

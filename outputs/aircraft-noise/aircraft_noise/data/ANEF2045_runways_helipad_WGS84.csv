@@ -1,0 +1,8 @@
+feature_type,runway_pair,runway_end,latitude,longitude,coordinate_source
+runway_endpoint,16R/34L,16R,-33.92935952,151.1715818,endorsed PDF Runway End table
+runway_endpoint,16R/34L,34L,-33.96427335,151.1806396,endorsed PDF Runway End table
+runway_endpoint,07/25,07,-33.94374984,151.1636248,endorsed PDF Runway End table
+runway_endpoint,07/25,25,-33.93753931,151.1899609,endorsed PDF Runway End table
+runway_endpoint,16L/34R,16L,-33.94961638,151.1883202,endorsed PDF Runway End table
+runway_endpoint,16L/34R,34R,-33.97110532,151.1938928,endorsed PDF Runway End table
+helipad,,Helipad,-33.93899,151.1909,endorsed PDF Runway End table

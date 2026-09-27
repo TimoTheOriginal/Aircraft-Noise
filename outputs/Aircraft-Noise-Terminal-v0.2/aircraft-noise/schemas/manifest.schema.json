@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aircraft-noise.local/schemas/manifest.schema.json",
+  "type": "object",
+  "properties": {
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "package_type": {
+      "enum": [
+        "aircraft-basis",
+        "room-results",
+        "report-issue"
+      ]
+    },
+    "package_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "assessment_id": {
+      "type": "string"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "producer": {
+      "type": "object",
+      "properties": {
+        "module": {
+          "enum": [
+            "aircraft",
+            "rooms",
+            "report"
+          ]
+        },
+        "software_version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "module",
+        "software_version"
+      ],
+      "additionalProperties": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "standard_edition": {
+      "const": "AS 2021:2015"
+    },
+    "data_mode": {
+      "enum": [
+        "synthetic",
+        "project"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "requires_confirmation",
+        "ready_for_review",
+        "approved"
+      ]
+    },
+    "upstream": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "package_type": {
+            "type": "string"
+          },
+          "package_id": {
+            "type": "string"
+          },
+          "payload_sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "package_type",
+          "package_id",
+          "payload_sha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "media_type": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "role",
+          "path",
+          "media_type",
+          "sha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "$ref": "https://aircraft-noise.local/schemas/common.schema.json#/$defs/Issue"
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reviewer_id": {
+            "type": "string"
+          },
+          "reviewer_name": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          },
+          "decision": {
+            "type": "string"
+          },
+          "reviewed_payload_sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reviewer_id",
+          "reviewer_name",
+          "scope",
+          "timestamp",
+          "decision",
+          "reviewed_payload_sha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "contract_version",
+    "package_type",
+    "package_id",
+    "project_id",
+    "assessment_id",
+    "revision",
+    "producer",
+    "created_at",
+    "standard_edition",
+    "data_mode",
+    "review_status",
+    "upstream",
+    "files",
+    "issues",
+    "approvals"
+  ],
+  "additionalProperties": false
+}

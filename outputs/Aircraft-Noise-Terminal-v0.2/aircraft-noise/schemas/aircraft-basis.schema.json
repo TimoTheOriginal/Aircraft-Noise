@@ -1,0 +1,368 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aircraft-noise.local/schemas/aircraft-basis.schema.json",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "object",
+      "properties": {
+        "project_id": {
+          "type": "string"
+        },
+        "assessment_id": {
+          "type": "string"
+        },
+        "client": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "site_address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "proposal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "building_use": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "airport_id": {
+          "const": "YSSY"
+        },
+        "forecast_year": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "assessment_purpose": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "project_id",
+        "assessment_id",
+        "client",
+        "site_address",
+        "proposal",
+        "building_use",
+        "airport_id",
+        "forecast_year",
+        "assessment_purpose"
+      ],
+      "additionalProperties": false
+    },
+    "site": {
+      "type": "object",
+      "properties": {
+        "crs": {
+          "const": "EPSG:4326"
+        },
+        "receptors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "receptor_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "latitude": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              },
+              "longitude": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "coordinate_source": {
+                "type": "string"
+              },
+              "elevation_m": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "vertical_datum": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "receptor_id",
+              "latitude",
+              "longitude",
+              "confirmed",
+              "coordinate_source",
+              "elevation_m",
+              "vertical_datum"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "footprint": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "airport_elevation_m": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "airport_vertical_datum": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "runway_geometry": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "crs",
+        "receptors",
+        "footprint",
+        "airport_elevation_m",
+        "airport_vertical_datum",
+        "runway_geometry"
+      ],
+      "additionalProperties": false
+    },
+    "anef": {
+      "type": "object",
+      "properties": {
+        "receptors": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "site_acceptability": {
+          "type": "object"
+        },
+        "transform_audit": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "receptors",
+        "site_acceptability",
+        "transform_audit"
+      ],
+      "additionalProperties": false
+    },
+    "operation_cases": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "operation_case_id",
+              "receptor_id",
+              "raw_geometry",
+              "corrected_geometry",
+              "terrain_correction",
+              "exterior_level",
+              "lookup_trace",
+              "issues"
+            ],
+            "properties": {
+              "exterior_level": {
+                "$ref": "https://aircraft-noise.local/schemas/common.schema.json#/$defs/Quantity"
+              },
+              "issues": {
+                "type": "array",
+                "items": {
+                  "$ref": "https://aircraft-noise.local/schemas/common.schema.json#/$defs/Issue"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "governing_exterior": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "receptor_id": {
+            "type": "string"
+          },
+          "operation_case_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "level": {
+            "$ref": "https://aircraft-noise.local/schemas/common.schema.json#/$defs/Quantity"
+          },
+          "selection_basis": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "confirmed",
+              "requires_confirmation",
+              "not_assessed"
+            ]
+          }
+        },
+        "required": [
+          "receptor_id",
+          "operation_case_ids",
+          "level",
+          "selection_basis",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "criterion_catalogue": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "criterion_id": {
+            "type": "string"
+          },
+          "building_type": {
+            "type": "string"
+          },
+          "activity": {
+            "type": "string"
+          },
+          "level": {
+            "$ref": "https://aircraft-noise.local/schemas/common.schema.json#/$defs/Quantity"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "applicability_notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "criterion_id",
+          "building_type",
+          "activity",
+          "level",
+          "source_refs",
+          "applicability_notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "spectra": {
+      "type": "array",
+      "items": {
+        "$ref": "https://aircraft-noise.local/schemas/common.schema.json#/$defs/Spectrum"
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "calculation_records": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "review_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset_id": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "caption": {
+            "type": "string"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "asset_id",
+          "role",
+          "path",
+          "caption",
+          "source_refs"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "project",
+    "site",
+    "anef",
+    "operation_cases",
+    "governing_exterior",
+    "criterion_catalogue",
+    "spectra",
+    "assumptions",
+    "calculation_records",
+    "review_decisions",
+    "assets"
+  ],
+  "additionalProperties": false
+}

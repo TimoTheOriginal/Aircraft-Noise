@@ -1,0 +1,96 @@
+{
+  "contract_version": "1.0.0",
+  "package_type": "aircraft-basis",
+  "package_id": "5f10fc7c-81b7-44d3-8b32-4d0379e068a3",
+  "project_id": "DEMO-001",
+  "assessment_id": "DEMO-SITE-01",
+  "revision": 1,
+  "producer": {
+    "module": "aircraft",
+    "software_version": "0.1.0"
+  },
+  "created_at": "2026-09-24T17:24:26.296113Z",
+  "standard_edition": "AS 2021:2015",
+  "data_mode": "synthetic",
+  "review_status": "requires_confirmation",
+  "upstream": [],
+  "files": [
+    {
+      "role": "payload",
+      "path": "aircraft_basis.json",
+      "media_type": "application/json",
+      "sha256": "bad70bbc634a4aa5d5701690157d84c7e79518decfb770d5718c30e719908ee0"
+    },
+    {
+      "role": "sources",
+      "path": "sources.json",
+      "media_type": "application/json",
+      "sha256": "5151d5fbe663dad3a0ff6dfc26b1464ba5d3a639219812952615f215ec58297d"
+    },
+    {
+      "role": "site_geometry",
+      "path": "assets/site-map.svg",
+      "media_type": "image/svg+xml",
+      "sha256": "f0657a7aa800e25024825bcd68f2b39ec5d26ed3bd1c4db32db1b4e879641f3a"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "MAP_REVIEW",
+      "severity": "warning",
+      "code": "MAP_REVIEW",
+      "message": "Supplied chart graphics and viewport extent need independent control-point and coverage verification.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "STANDARD_REVIEW",
+      "severity": "warning",
+      "code": "STANDARD_REVIEW",
+      "message": "Original AS 2021:2015 pages and independent table transcription checks are not supplied.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "OPERATIONS_REVIEW",
+      "severity": "warning",
+      "code": "OPERATIONS_REVIEW",
+      "message": "Confirm forecast movement register and all relevant runway directions before selecting a design maximum.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "SYNTHETIC",
+      "severity": "warning",
+      "code": "SYNTHETIC",
+      "message": "Synthetic test inputs; not a real acoustic assessment.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "BOUNDARY_REVIEW-R01",
+      "severity": "warning",
+      "code": "BOUNDARY_REVIEW",
+      "message": "Near a contour or outside coverage; confirm exposure manually.",
+      "affected_ids": [
+        "R01"
+      ],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    },
+    {
+      "issue_id": "SPECTRA_MISSING",
+      "severity": "warning",
+      "code": "SPECTRA_MISSING",
+      "message": "No separately sourced spectra; overall dB(A) is not converted to spectral bands.",
+      "affected_ids": [],
+      "blocks_approval": true,
+      "owner_module": "aircraft"
+    }
+  ],
+  "approvals": []
+}

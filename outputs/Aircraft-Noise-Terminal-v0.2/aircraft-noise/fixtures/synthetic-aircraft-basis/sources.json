@@ -1,0 +1,72 @@
+[
+  {
+    "source_id": "contours",
+    "title": "ANEF2045_contours_WGS84.geojson",
+    "filename": "ANEF2045_contours_WGS84.geojson",
+    "sha256": "949888daf081eb85c7a05268359eb3e8e1a0b2e170299cc396f08cd89419a719",
+    "edition_or_revision": "ANEF 2045 supplied extraction",
+    "source_type": "digitised_map",
+    "locator": {
+      "method": "supplied local file",
+      "reviewer": null,
+      "confidence": "chart-scale; independent checks pending"
+    },
+    "verification_status": "requires_confirmation"
+  },
+  {
+    "source_id": "runways",
+    "title": "ANEF2045_runways_helipad_WGS84.geojson",
+    "filename": "ANEF2045_runways_helipad_WGS84.geojson",
+    "sha256": "f800d14f0d823d09a7b644e9337e6a056bedc0eb7393a3ba3686bdd6b9e8cb04",
+    "edition_or_revision": "ANEF 2045 supplied extraction",
+    "source_type": "runway_coordinates",
+    "locator": {
+      "method": "supplied local file",
+      "reviewer": null,
+      "confidence": "chart-scale; independent checks pending"
+    },
+    "verification_status": "requires_confirmation"
+  },
+  {
+    "source_id": "georeferencing",
+    "title": "ANEF2045_georeferencing_notes.txt",
+    "filename": "ANEF2045_georeferencing_notes.txt",
+    "sha256": "7936eefb8bacddce7d85d30b40d1197b32b681802019329604a84d30a4c63827",
+    "edition_or_revision": "ANEF 2045 supplied extraction",
+    "source_type": "georeferencing_notes",
+    "locator": {
+      "method": "supplied local file",
+      "reviewer": null,
+      "confidence": "chart-scale; independent checks pending"
+    },
+    "verification_status": "requires_confirmation"
+  },
+  {
+    "source_id": "standard-text",
+    "title": "AS 2021:2015 extracted text",
+    "filename": "AS 2021-2015 LLM-optimized.txt",
+    "sha256": "567ffc20906e23368c839f072245d5584203f1df9396f407b8e90b34e5882be0",
+    "edition_or_revision": "AS 2021:2015",
+    "source_type": "unverified_extracted_text",
+    "locator": {
+      "printed_pages": "22–24",
+      "pdf_pages": "24–26",
+      "references": "Tables 3.2, 3.3; original scan absent",
+      "extraction_method": "user-supplied text; visible OCR corruption",
+      "reviewer": null
+    },
+    "verification_status": "requires_confirmation"
+  },
+  {
+    "source_id": "synthetic-table",
+    "title": "Synthetic test table; NOT Standard data",
+    "filename": "synthetic-request.json",
+    "sha256": "63048fdaf5ffc9479fa19decb16be47aa09d876d87a757c06c4ddad95dcbe87b",
+    "edition_or_revision": "fixture-v1",
+    "source_type": "synthetic",
+    "locator": {
+      "method": "explicit software test data"
+    },
+    "verification_status": "unverified"
+  }
+]

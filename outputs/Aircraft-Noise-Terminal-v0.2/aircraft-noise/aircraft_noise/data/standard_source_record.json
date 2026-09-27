@@ -1,0 +1,16 @@
+{
+  "source_id": "standard-text",
+  "title": "AS 2021:2015 extracted text",
+  "filename": "AS 2021-2015 LLM-optimized.txt",
+  "sha256": "567ffc20906e23368c839f072245d5584203f1df9396f407b8e90b34e5882be0",
+  "edition_or_revision": "AS 2021:2015",
+  "source_type": "unverified_extracted_text",
+  "locator": {
+    "printed_pages": "22\u201324",
+    "pdf_pages": "24\u201326",
+    "references": "Tables 3.2, 3.3; original scan absent",
+    "extraction_method": "user-supplied text; visible OCR corruption",
+    "reviewer": null
+  },
+  "verification_status": "requires_confirmation"
+}

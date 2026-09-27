@@ -1,0 +1,50 @@
+test_blank_asterisk_not_zero (test_aircraft.AcousticTests.test_blank_asterisk_not_zero) ... ok
+test_exact_axes_not_transposed (test_aircraft.AcousticTests.test_exact_axes_not_transposed) ... ok
+test_interpolation_not_implicit (test_aircraft.AcousticTests.test_interpolation_not_implicit) ... ok
+test_irregular_interpolation (test_aircraft.AcousticTests.test_irregular_interpolation) ... ok
+test_no_extrapolation (test_aircraft.AcousticTests.test_no_extrapolation) ... ok
+test_terrain_threshold_sign_interpolation (test_aircraft.AcousticTests.test_terrain_threshold_sign_interpolation) ... ok
+test_below_20_workflow_rule (test_aircraft.ContourTests.test_below_20_workflow_rule) ... ok
+test_between_20_25 (test_aircraft.ContourTests.test_between_20_25) ... ok
+test_boundary_vertex (test_aircraft.ContourTests.test_boundary_vertex) ... ok
+test_disconnected_lobe (test_aircraft.ContourTests.test_disconnected_lobe) ... ok
+test_highest_open_band (test_aircraft.ContourTests.test_highest_open_band) ... ok
+test_outside_is_unknown_not_below (test_aircraft.ContourTests.test_outside_is_unknown_not_below) ... ok
+test_supplied_contours_closed_valid (test_aircraft.ContourTests.test_supplied_contours_closed_valid) ... ok
+test_export_consumer_hash_validation_and_immutable_path (test_aircraft.ContractTests.test_export_consumer_hash_validation_and_immutable_path) ... ok
+test_path_traversal (test_aircraft.ContractTests.test_path_traversal) ... ok
+test_schema_missing_inputs_actionable (test_aircraft.ContractTests.test_schema_missing_inputs_actionable) ... ok
+test_synthetic_approval_rejected (test_aircraft.ContractTests.test_synthetic_approval_rejected) ... ok
+test_beside_does_not_invent_dl_dt (test_aircraft.GeometryTests.test_beside_does_not_invent_dl_dt) ... ok
+test_both_ends_and_sides (test_aircraft.GeometryTests.test_both_ends_and_sides) ... ok
+test_curve_equation_and_invalid_domain (test_aircraft.GeometryTests.test_curve_equation_and_invalid_domain) ... ok
+test_bad_axis_order_and_crs (test_aircraft.ServiceTests.test_bad_axis_order_and_crs) ... ok
+test_deterministic_offline (test_aircraft.ServiceTests.test_deterministic_offline) ... ok
+test_global_coordinate_unknown (test_aircraft.ServiceTests.test_global_coordinate_unknown) ... ok
+test_invalid_spectral_arrays (test_aircraft.ServiceTests.test_invalid_spectral_arrays) ... ok
+test_missing_data_not_zero (test_aircraft.ServiceTests.test_missing_data_not_zero) ... ok
+test_nearest_need_not_govern (test_aircraft.ServiceTests.test_nearest_need_not_govern) ... ok
+test_project_rejects_unverified_table (test_aircraft.ServiceTests.test_project_rejects_unverified_table) ... ok
+test_synthetic_exact_level_no_rooms (test_aircraft.ServiceTests.test_synthetic_exact_level_no_rooms) ... ok
+test_terrain_does_not_mutate_raw (test_aircraft.ServiceTests.test_terrain_does_not_mutate_raw) ... ok
+test_unsupported_aircraft_and_path (test_aircraft.ServiceTests.test_unsupported_aircraft_and_path) ... ok
+test_wrong_direction_unsupported (test_aircraft.ServiceTests.test_wrong_direction_unsupported) ... ok
+test_all_matrices_unique_axes_including_recovered_identifiers (test_forecast.ForecastTests.test_all_matrices_unique_axes_including_recovered_identifiers) ... ok
+test_elevation_unapplied_explicit_and_corrected_raw_preserved (test_forecast.ForecastTests.test_elevation_unapplied_explicit_and_corrected_raw_preserved) ... ok
+test_example_three_highest_and_cell_evidence (test_forecast.ForecastTests.test_example_three_highest_and_cell_evidence) ... ok
+test_fractional_frequency_and_dash_retained (test_forecast.ForecastTests.test_fractional_frequency_and_dash_retained) ... ok
+test_nearest_contour_outside_and_inside (test_forecast.ForecastTests.test_nearest_contour_outside_and_inside) ... ok
+test_new_forecast_package_portable_and_offline (test_forecast.ForecastTests.test_new_forecast_package_portable_and_offline) ... ok
+test_no_application_buttons_or_click_menus (test_forecast.ForecastTests.test_no_application_buttons_or_click_menus) ... ok
+test_no_extrapolation_or_missing_corner_zero (test_forecast.ForecastTests.test_no_extrapolation_or_missing_corner_zero) ... ok
+test_one_coordinate_string_precision_and_validation (test_forecast.ForecastTests.test_one_coordinate_string_precision_and_validation) ... ok
+test_overrides_require_reason_and_known_table (test_forecast.ForecastTests.test_overrides_require_reason_and_known_table) ... ok
+test_ranking_ties_retained_and_not_frequency_weighted (test_forecast.ForecastTests.test_ranking_ties_retained_and_not_frequency_weighted) ... ok
+test_select_only_2045_sheet (test_forecast.ForecastTests.test_select_only_2045_sheet) ... ok
+test_surrounding_max_nonmonotonic_cell_not_nearest (test_forecast.ForecastTests.test_surrounding_max_nonmonotonic_cell_not_nearest) ... ok
+test_unmapped_new_variants_not_silently_substituted (test_forecast.ForecastTests.test_unmapped_new_variants_not_silently_substituted) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 0.508s
+
+OK
